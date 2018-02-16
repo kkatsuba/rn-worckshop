@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { signUp } from '../../actions/auth';
 import Spinner from '../../components/Spinner';
 import styles from './styles';
+import WelcomBackButton from '../../components/WelcomBackButton';
 
 class SignUpStep2 extends Component {
   state = {
@@ -46,11 +47,7 @@ class SignUpStep2 extends Component {
     return (
       <Container style={styles.container}>
         {isFetching && <Spinner />}
-        <View style={[{ flex: 1 }, styles.backButtonContainer]}>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Icon name="arrow-back" style={styles.backButton} />
-          </TouchableOpacity>
-        </View>
+        <WelcomBackButton onPress={() => this.props.navigation.goBack()} />
         <View style={styles.stepContainer}>
           <Text style={styles.titleText}>Create{'\n'}password</Text>
           <Text style={styles.stepText}>2/2{'\n'}Steps</Text>

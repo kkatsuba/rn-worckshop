@@ -54,3 +54,6 @@ buck-out/
 */fastlane/screenshots
 
 .vscode
+
+yarn.lock
+package-lock.json

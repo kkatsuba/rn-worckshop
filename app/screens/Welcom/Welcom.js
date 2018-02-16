@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Text, Image, View, TouchableOpacity } from 'react-native';
 import { Container, Button } from 'native-base';
 import styles from './styles';
@@ -24,3 +25,7 @@ export default class Welcom extends Component {
     );
   }
 }
+
+Welcom.propTypes = {
+  navigation: PropTypes.any
+};

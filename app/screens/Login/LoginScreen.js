@@ -6,6 +6,7 @@ import { Input, Item, Icon, Container, Form } from 'native-base';
 import Spinner from '../../components/Spinner';
 import { logIn } from '../../actions/auth';
 import styles from './styles';
+import WelcomBackButton from '../../components/WelcomBackButton';
 
 class LoginScreen extends Component {
   state = {
@@ -30,11 +31,7 @@ class LoginScreen extends Component {
     return (
       <Container style={styles.container}>
         {isFetching && <Spinner />}
-        <View style={[{ flex: 1 }, styles.backButtonContainer]}>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Icon name="arrow-back" style={styles.backButton} />
-          </TouchableOpacity>
-        </View>
+        <WelcomBackButton onPress={() => this.props.navigation.goBack()} />
         <View style={{ flex: 1 }}>
           <Text style={styles.titleText}>Log In</Text>
         </View>

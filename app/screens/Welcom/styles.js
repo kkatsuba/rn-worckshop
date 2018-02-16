@@ -19,8 +19,7 @@ export default StyleSheet.create({
   },
   helpTextContainer: {
     marginVertical: 10,
-    flexDirection: 'row',
-    justifyContent: 'center'
+    alignItems: 'center'
   },
   justText: {
     fontSize: 18

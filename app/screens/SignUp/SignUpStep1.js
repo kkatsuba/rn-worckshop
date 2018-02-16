@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { Input, Item, Icon, Container, Form } from 'native-base';
 import debounce from 'lodash/debounce';
+import WelcomBackButton from '../../components/WelcomBackButton';
 import styles from './styles';
 
 export default class SignUpStep1 extends Component {
@@ -43,11 +44,7 @@ export default class SignUpStep1 extends Component {
     const disabled = !!(error || (!this.state.name && !this.state.email));
     return (
       <Container style={styles.container}>
-        <View style={[{ flex: 1 }, styles.backButtonContainer]}>
-          <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
-            <Icon name="arrow-back" style={styles.backButton} />
-          </TouchableOpacity>
-        </View>
+        <WelcomBackButton onPress={() => this.props.navigation.goBack()} />
         <View style={styles.stepContainer}>
           <Text style={styles.titleText}>New{'\n'}Account</Text>
           <Text style={styles.stepText}>1/2{'\n'}Steps</Text>
