@@ -8,10 +8,18 @@
     "lint": "eslint . --ext .js,.json --fix"
   },
   "dependencies": {
+    "firebase": "^4.9.1",
+    "lodash": "^4.17.5",
+    "native-base": "^2.3.8",
     "prop-types": "^15.6.0",
     "react": "16.2.0",
-    "react-native": "0.53.0",
-    "redux": "^3.7.2"
+    "react-native": "0.52.0",
+    "react-native-easy-grid": "^0.1.17",
+    "react-native-firebase": "^3.2.5",
+    "react-navigation": "^1.0.3",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
