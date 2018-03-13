@@ -1,0 +1,37 @@
+platform :ios, '9.0'
+
+target 'workshop' do
+  pod 'yoga', path: '../node_modules/react-native/ReactCommon/yoga/yoga.podspec'
+  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+  pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+  pod 'GLog', :podspec => '../node_modules/react-native/third-party-podspecs/GLog.podspec'
+  pod 'React', path: '../node_modules/react-native', subspecs: [
+    'Core',
+    'jschelpers',
+    'cxxreact',
+    'CxxBridge',
+    'DevSupport',
+    'RCTText',
+    'RCTImage',
+    'RCTNetwork',
+    'RCTActionSheet',
+    'RCTAnimation',
+    'RCTWebSocket',
+  ]
+
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'RNFirebase', path: '../node_modules/react-native-firebase/ios/RNFirebase.podspec'
+end
+
+# post_install do |installer|
+#   installer.pods_project.targets.each do |target|
+#       if target.name == 'yoga'
+#           target.build_configurations.each do |config|
+#               config.build_settings['GCC_TREAT_WARNINGS_AS_ERRORS'] = 'NO'
+#               config.build_settings['GCC_WARN_64_TO_32_BIT_CONVERSION'] = 'NO'
+#           end
+#       end
+#   end
+# end
