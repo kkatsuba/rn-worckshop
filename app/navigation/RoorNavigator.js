@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { StackNavigator } from 'react-navigation';
 import AuthStack from './AuthStack';
-import Main from '../screens/Main/Main';
 import { isSignedIn } from '../services/auth';
 import { signInValidated } from '../actions/auth';
+import MainStack from './MainStack';
 
 const createRootNavi = (isSignedIn = false) => (
   StackNavigator({
@@ -13,11 +13,7 @@ const createRootNavi = (isSignedIn = false) => (
       screen: AuthStack,
     },
     MainStack: {
-      screen: StackNavigator({
-        Main: {
-          screen: Main
-        }
-      })
+      screen: MainStack
     }
   }, {
     headerMode: 'none',

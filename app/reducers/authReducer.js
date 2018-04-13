@@ -18,7 +18,7 @@ export const auth = (state = defaultState, action) => {
         isFetching: false,
         error: action.error,
         user: action.user,
-        isSignIn: true
+        isSignIn: !!action.user
       };
     case LOG_OUT:
       return {
